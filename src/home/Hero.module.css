@@ -1,0 +1,43 @@
+.heroContainer {
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-around;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+img {
+  align-content: center;
+  background-color: var(--grey);
+  border-radius: 10px;
+  max-width: clamp(300px, 100%, 400px);
+}
+
+.text {
+  align-content: space-around;
+  max-width: clamp(300px, 100%, 400px);
+}
+.text p {
+  padding-top: 20px;
+}
+
+@media (max-width: 750px) {
+  .heroContainer {
+    padding: 20px 10px;
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .heroContainer * {
+    margin-top: 10px;
+  }
+  img {
+    height: auto;
+  }
+  .text p {
+    padding:10px 0px;
+  }
+}

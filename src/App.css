@@ -1,0 +1,30 @@
+:root {
+  --white: #f4f4f4;
+  --grey: #eaeaea;
+  --green: #a1ff62;
+  --black: #201d1d;
+}
+
+html,
+body,
+#root {
+  background-color: var(--white);
+  color: var(--black);
+  height: 100vh;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+}
+
+body {
+  margin: 0 auto;
+  font-family: Inter, Courier, monospace;
+}
+
+#main {
+  flex: 1;
+}

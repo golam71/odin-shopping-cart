@@ -1,0 +1,27 @@
+nav {
+  display: flex;
+  gap: 10px;
+
+  background-color: var(--grey);
+
+  color: var(--black);
+  padding: 5px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+nav * {
+  text-decoration: none;
+  margin: 2px;
+  padding: 4px 10px;
+}
+.logo {
+  flex: 1 !important;
+  font-family: DynaPuff;
+}
+
+nav *:not(.logo):hover {
+  transition: background-color 0.2s ease;
+  border-radius: 20px;
+  background-color: var(--green);
+}

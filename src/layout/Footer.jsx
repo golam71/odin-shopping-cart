@@ -1,7 +1,11 @@
+import "./Footer.module.css";
+
 const Footer = () => {
   return (
     <>
-      <div>Footer</div>
+      <footer>
+        <div>Odin Cart</div>
+      </footer>
     </>
   );
 };

@@ -1,37 +1,23 @@
-/* footer {
-  background-color: var(--grey);
-  color: var(--black);
-  font-size: 18vw;
-  text-align: center;
-  overflow: hidden;
-  max-height: 9vw;
-
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-}
-
-footer div {
-  font-family: DynaPuff;
-  transform: translateY(-20%);
-  -webkit-text-fill-color: transparent;
-  -webkit-text-stroke: 2px var(--black);
-} */
-
 footer {
   background-color: var(--grey);
   color: var(--black);
-  font-size: clamp(4rem, 18vw, 12rem);
+
   text-align: center;
-  overflow: hidden;
-  max-height: clamp(3rem, 12vw, 8rem);
 
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
+
+  z-index: 100;
 }
 
 footer div {
+  overflow: hidden;
+}
+
+footer div div {
   font-family: DynaPuff;
-  transform: translateY(-10%);
+  font-size: clamp(4rem, 18vw, 12rem);
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke: 2px var(--black);
+  /* transform: translateY(50%); */
 }

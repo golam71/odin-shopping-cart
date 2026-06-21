@@ -4,7 +4,9 @@ const Footer = () => {
   return (
     <>
       <footer>
-        <div>Odin Cart</div>
+        <div>
+          <div>Odin Cart</div>
+        </div>
       </footer>
     </>
   );

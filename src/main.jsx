@@ -15,7 +15,14 @@ const router = createBrowserRouter([
     Component: App,
     children: [
       { index: true, Component: Home },
-      { path: "/products", Component: Products },
+      {
+        path: "/products",
+        loader: async () => {
+          return 10;
+        },
+
+        Component: Products,
+      },
       { path: "/cart", Component: Cart },
     ],
   },

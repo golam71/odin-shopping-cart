@@ -9,11 +9,11 @@ const ProductCard = ({ name, shortDescription, price, image }) => {
         <img src={image} alt={`Image of ${shortDescription}`} />
         <div className={style.flex}>
           <h3 className={style.name}>{name}</h3>
-          <p className={style.price}>{price}$</p>
+          <p>{price}$</p>
         </div>
-        <p>{shortDescription}</p>
+        <p className={style.description}>{shortDescription}</p>
 
-        <div className={style.flex}>
+        <div className={style.flexButtons}>
           <button
             onClick={() => {
               setCount((count) => count + 1);
@@ -24,6 +24,10 @@ const ProductCard = ({ name, shortDescription, price, image }) => {
           <p>{count}</p>
           <button
             onClick={() => {
+              if (count == 0) {
+                setCount(0);
+                return;
+              }
               setCount((count) => count - 1);
             }}
           >

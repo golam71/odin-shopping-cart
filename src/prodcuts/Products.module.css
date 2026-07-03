@@ -1,0 +1,15 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.container img {
+  object-fit: cover;
+  width: 300px;
+  height: 200px;
+  height: auto;
+}
+
+.card {
+  width: 320px;
+}

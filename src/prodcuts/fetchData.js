@@ -19,7 +19,7 @@ export default async function fetchData() {
   if (response.ok) {
     let json = await response.json();
     return json;
-  } else {
+t  } else {
     alert(`Error happened. Status code ${response?.status}`);
   }
 }

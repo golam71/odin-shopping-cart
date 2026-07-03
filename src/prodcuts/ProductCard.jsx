@@ -6,12 +6,14 @@ const ProductCard = ({ name, shortDescription, price, image }) => {
   return (
     <>
       <div className={style.card}>
-        <h3>{name}</h3>
         <img src={image} alt={`Image of ${shortDescription}`} />
+        <div className={style.flex}>
+          <h3 className={style.name}>{name}</h3>
+          <p className={style.price}>{price}$</p>
+        </div>
         <p>{shortDescription}</p>
-        <p>{price}$</p>
 
-        <div className="flex">
+        <div className={style.flex}>
           <button
             onClick={() => {
               setCount((count) => count + 1);

@@ -9,6 +9,8 @@ const Cart = () => {
 
   return (
     <>
+      {buyList.length < 1 ? "Buy some  items first in the shop page" : ""}
+
       {buyList.map((list) => {
         return (
           <>

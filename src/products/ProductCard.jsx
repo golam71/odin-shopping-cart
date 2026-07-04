@@ -1,4 +1,5 @@
 import { useOutletContext, useSearchParams } from "react-router";
+import PropTypes from "prop-types";
 import style from "./Products.module.css";
 import { useState } from "react";
 
@@ -69,3 +70,12 @@ const ProductCard = ({ id, name, shortDescription, price, image, count }) => {
 };
 
 export default ProductCard;
+
+ProductCard.propTypes = {
+  id: PropTypes.number.isRequired,
+  name: PropTypes.string.isRequired,
+  shortDescription: PropTypes.string.isRequired,
+  image: PropTypes.string.isRequired,
+  price: PropTypes.number.isRequired,
+  count: PropTypes.number.isRequired,
+};

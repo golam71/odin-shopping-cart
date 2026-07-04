@@ -1,4 +1,5 @@
 import { Link } from "react-router";
+import PropTypes from "prop-types";
 import styles from "./Navbar.module.css";
 
 import { useOutletContext } from "react-router";
@@ -25,3 +26,7 @@ const Navbar = ({ storeData }) => {
 };
 
 export default Navbar;
+
+Navbar.prototype = {
+  storeData: PropTypes.array.isRequired,
+};

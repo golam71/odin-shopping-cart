@@ -7,13 +7,16 @@ import Home from "./home/Home.jsx";
 import Products from "./prodcuts/Products.jsx";
 import fetchData from "./prodcuts/fetchData.js";
 import Cart from "./cart/Cart.jsx";
+import RootErrorBoundary from "./misc/RootErrorBoundary.jsx";
 
 import { createBrowserRouter } from "react-router";
 import { RouterProvider } from "react-router/dom";
+import { useRouteError } from "react-router";
 
 const router = createBrowserRouter([
   {
     Component: App,
+    ErrorBoundary: RootErrorBoundary,
     children: [
       { index: true, Component: Home },
       {

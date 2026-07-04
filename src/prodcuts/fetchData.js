@@ -5,7 +5,7 @@ export default async function fetchData() {
   const signal = controller.signal;
 
   // Cancel the fetch request in 2s
-  setTimeout(() => controller.abort(), 2000);
+  setTimeout(() => controller.abort(), 15000);
 
   try {
     response = await fetch(

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import style from "./Products.module.css";
 
-const ProductCard = ({ name, shortDescription, price, image }) => {
+const   ProductCard = ({ name, shortDescription, price, image }) => {
   const [count, setCount] = useState(0);
   return (
     <>
@@ -16,14 +16,6 @@ const ProductCard = ({ name, shortDescription, price, image }) => {
         <div className={style.flexButtons}>
           <button
             onClick={() => {
-              setCount((count) => count + 1);
-            }}
-          >
-            +
-          </button>
-          <p>{count}</p>
-          <button
-            onClick={() => {
               if (count == 0) {
                 setCount(0);
                 return;
@@ -32,6 +24,15 @@ const ProductCard = ({ name, shortDescription, price, image }) => {
             }}
           >
             -
+          </button>
+
+          <p>{count}</p>
+          <button
+            onClick={() => {
+              setCount((count) => count + 1);
+            }}
+          >
+            +
           </button>
         </div>
       </div>

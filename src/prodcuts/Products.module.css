@@ -55,3 +55,18 @@
   width: 30px;
   font-variant-numeric: tabular-nums;
 }
+
+.link {
+  text-align: center;
+  padding: 5px 15px;
+  margin: 30px auto;
+  background-color: var(--grey);
+  display: block;
+  width: fit-content;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.link:hover {
+  background-color: var(--green);
+}

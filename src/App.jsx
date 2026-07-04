@@ -5,12 +5,15 @@ import Navbar from "./layout/Navbar.jsx";
 
 import { Outlet } from "react-router";
 
+import { useState } from "react";
+
 function App() {
+  const [storeData, setStoreData] = useState([]);
   return (
     <>
-      <Navbar />
+      <Navbar storeData={storeData} />
       <div id="main">
-        <Outlet />
+        <Outlet context={{ storeData, setStoreData }} />
       </div>
       <Footer />
     </>

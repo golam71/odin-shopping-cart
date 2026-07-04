@@ -1,0 +1,55 @@
+import { useOutletContext } from "react-router";
+import style from "./Products.module.css";
+
+const ProductCard = ({ id, name, shortDescription, price, image, count }) => {
+  const { storeData, setStoreData } = useOutletContext();
+  return (
+    <>
+      <div className={style.card}>
+        <img src={image} alt={shortDescription} />
+        <div className={style.flex}>
+          <h3 className={style.name}>{name}</h3>
+          <p style={{ fontVariantNumeric: "tabular-nums" }}>
+            {count < 1 ? price : Math.floor(price * count * 100) / 100}$
+          </p>
+        </div>
+        <p className={style.description}>{shortDescription}</p>
+
+        <div className={style.flexButtons}>
+          <button
+            type="button"
+            onClick={() => {
+              setStoreData(
+                storeData.map((product) =>
+                  product.id === id && product.count > 0
+                    ? { ...product, count: product.count - 1 }
+                    : product,
+                ),
+              );
+            }}
+          >
+            -
+          </button>
+
+          <p>{count}</p>
+          <button
+            type="button"
+            onClick={() => {
+              setStoreData(
+                storeData.map((product) =>
+                  product.id === id
+                    ? { ...product, count: product.count + 1 }
+                    : product,
+                ),
+              );
+            }}
+          >
+            +
+          </button>
+        </div>
+      </div>
+    </>
+  );
+};
+
+export default ProductCard;

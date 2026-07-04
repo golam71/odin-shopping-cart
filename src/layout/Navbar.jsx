@@ -1,7 +1,14 @@
 import { Link } from "react-router";
 import styles from "./Navbar.module.css";
 
-const Navbar = () => {
+import { useOutletContext } from "react-router";
+
+const Navbar = ({ storeData }) => {
+  let count = 0;
+  storeData.forEach((data) => {
+    count += data.count;
+  });
+
   return (
     <>
       <nav className={styles.nav}>
@@ -9,7 +16,9 @@ const Navbar = () => {
           Odin Cart
         </Link>
         <Link to="/products">Products</Link>
-        <Link to="/cart">Cart</Link>
+        <Link style={{ fontVariantNumeric: "tabular-nums" }} to="/cart">
+          Cart {count > 0 ? `(${count})` : ""}{" "}
+        </Link>
       </nav>
     </>
   );

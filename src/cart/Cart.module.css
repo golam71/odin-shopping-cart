@@ -1,0 +1,37 @@
+.cartCard {
+  display: flex;
+  padding: 10px;
+
+  background-color: var(--grey);
+  border-radius: 10px;
+
+  max-width: 600px;
+  margin: 30px auto;
+}
+
+.cartCard img {
+  border-radius: 5px;
+  width: 200px;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 20px;
+  text-align: center;
+  max-width: 100px;
+}
+
+@media screen and (min-width: 768px) {
+  .cartCard img {
+    width: 300px;
+  }
+
+  .cartCard {
+    justify-content: space-between;
+  }
+  .text {
+    text-align: unset;
+  }
+}

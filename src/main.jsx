@@ -4,8 +4,8 @@ import "./index.css";
 
 import App from "./App.jsx";
 import Home from "./home/Home.jsx";
-import Products from "./prodcuts/Products.jsx";
-import fetchData from "./prodcuts/fetchData.js";
+import Products from "./products/Products.jsx";
+import fetchData from "./products/fetchData.js";
 import Cart from "./cart/Cart.jsx";
 import RootErrorBoundary from "./misc/RootErrorBoundary.jsx";
 

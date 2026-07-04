@@ -9,7 +9,8 @@ export default async function fetchData() {
 
   try {
     response = await fetch(
-      "https://raw.githubusercontent.com/golam71/odin-shopping-cart/refs/heads/main/public/data.json",
+      // "https://raw.githubusercontent.com/golam71/odin-shopping-cart/refs/heads/main/public/data.json",
+      "/data.json",
       { signal },
     );
   } catch (error) {

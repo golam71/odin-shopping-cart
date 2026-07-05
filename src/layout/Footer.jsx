@@ -1,11 +1,11 @@
-import "./Footer.module.css";
+import style from "./Footer.module.css";
 
 const Footer = () => {
   return (
     <>
-      <footer>
-        <div>
-          <div>Odin Cart</div>
+      <footer className={style.footer}>
+        <div className={style.footerDiv}>
+          <div className={style.footerFont}>Odin Cart</div>
         </div>
       </footer>
     </>

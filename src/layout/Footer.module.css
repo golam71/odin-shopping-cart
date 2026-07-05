@@ -10,11 +10,11 @@ footer {
   z-index: 100;
 }
 
-footer div {
+.footerDiv {
   overflow: hidden;
 }
 
-footer div div {
+.footerFont {
   font-family: DynaPuff;
   font-size: clamp(4rem, 18vw, 12rem);
   -webkit-text-fill-color: transparent;

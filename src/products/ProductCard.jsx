@@ -1,7 +1,6 @@
-import { useOutletContext, useSearchParams } from "react-router";
+import { useOutletContext } from "react-router";
 import PropTypes from "prop-types";
 import style from "./Products.module.css";
-import { useState } from "react";
 
 const ProductCard = ({ id, name, shortDescription, price, image, count }) => {
   const { storeData, setStoreData } = useOutletContext();
@@ -42,7 +41,7 @@ const ProductCard = ({ id, name, shortDescription, price, image, count }) => {
             onChange={(e) => {
               setStoreData(
                 storeData.map((product) =>
-                  product.id == id
+                  product.id === id
                     ? { ...product, count: Number(e.target.value) }
                     : product,
                 ),

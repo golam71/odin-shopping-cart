@@ -27,6 +27,6 @@ const Navbar = ({ storeData }) => {
 
 export default Navbar;
 
-Navbar.prototype = {
+Navbar.propTypes = {
   storeData: PropTypes.array.isRequired,
 };

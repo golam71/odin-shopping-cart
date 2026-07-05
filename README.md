@@ -1,16 +1,48 @@
-# React + Vite
+# Odin shopping cart
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a shopping cart website with react router.
 
-Currently, two official plugins are available:
+![Image of website](image.png)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+There are 3 pages:
 
-## React Compiler
+- Home
+- Products
+- Cart
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Now the pages are divided into folders. Layout is well the `layout` it is common for every page.
+The folders have the css modules and those are imported.
 
-## Expanding the ESLint configuration
+Styling was done in `App.css` and `index.css` is a css reset.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Routes are defined in `main.jsx`
+
+Props drilling was used to manage state for the json data. Its mutilated at download to add `count`
+
+All the test files are in the test folder and only tests dynamic features.
+
+There is `errorBoundary` in misc folder.
+
+Data is fetched with browsers fetch API.
+
+## Getting started
+
+Installation
+
+```bash
+git clone https://github.com/golam71/odin-shopping-cart
+cd odin-shopping-cart
+npm install
+```
+
+Running Live
+
+```bash
+npm run dev
+```
+
+Running tests
+
+```bash
+npm run test
+```

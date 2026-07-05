@@ -11,7 +11,6 @@ import RootErrorBoundary from "./misc/RootErrorBoundary.jsx";
 
 import { createBrowserRouter } from "react-router";
 import { RouterProvider } from "react-router/dom";
-import { useRouteError } from "react-router";
 
 const router = createBrowserRouter([
   {

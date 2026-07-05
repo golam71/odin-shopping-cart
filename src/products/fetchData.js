@@ -1,26 +1,17 @@
 export default async function fetchData() {
-  let response;
-
   const controller = new AbortController();
   const signal = controller.signal;
 
-  // Cancel the fetch request in 2s
-  setTimeout(() => controller.abort(), 15000);
+  setTimeout(() => controller.abort(), 9000);
 
   try {
-    response = await fetch(
-      // "https://raw.githubusercontent.com/golam71/odin-shopping-cart/refs/heads/main/public/data.json",
-      "/data.json",
-      { signal },
-    );
+    const response = await fetch("/data.json", { signal });
+    if (response.ok) {
+      return await response.json();
+    } else {
+      alert(`Error happened. Status code ${response.status}`);
+    }
   } catch (error) {
-    alert(`Could not fetch data. Error : ${error}`);
-  }
-
-  if (response.ok) {
-    let json = await response.json();
-    return json;
-  } else {
-    alert(`Error happened. Status code ${response?.status}`);
+    alert(`Could not fetch data. Error: ${error}`);
   }
 }
